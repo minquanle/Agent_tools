@@ -31,4 +31,4 @@ Mở terminal và chạy lệnh:
 ```bash
 python agent_tools.py
 ```
-*(Lưu ý: do giới hạn Rate Limit của Google API miễn phí, nếu bạn gặp lỗi 429 Resource Exhausted, hãy thử bỏ comment từng câu hỏi trong `cac_cau_hoi` hoặc dùng `time.sleep()` giữa các lần gọi).*
+*(Chương trình sẽ mở ra dấu nhắc lệnh để bạn có thể chat trực tiếp với Agent và liên tục hỏi đáp các câu hỏi tuỳ ý. Gõ `exit` hoặc `quit` để thoát.)*
