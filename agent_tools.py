@@ -85,16 +85,19 @@ def run_agent(cau_hoi: str, max_buoc: int = 5) -> str:
     return "Da dat gioi han so buoc xu ly, vui long thu lai cau hoi don gian hon."
 
 if __name__ == "__main__":
-    cac_cau_hoi = [
-        "Tinh giup toi 1234 nhan 5678 bang bao nhieu?",
-        "Cau 'Tri tue nhan tao dang thay doi the gioi' co bao nhieu tu?",
-        "Dem so tu trong cau 'Hoc AI rat vui' roi nhan ket qua do voi 100.",
-        "Xin chao, ban co khoe khong?",
-    ]
-
-    for cau_hoi in cac_cau_hoi:
-        print("=" * 60)
-        print(f"Nguoi dung: {cau_hoi}")
+    print("=" * 60)
+    print("Chatbot Agent Tool Calling đã sẵn sàng!")
+    print("Gõ 'exit' hoặc 'quit' để thoát.")
+    print("=" * 60)
+    
+    while True:
+        cau_hoi = input("\nNguoi dung: ")
+        if cau_hoi.lower() in ['exit', 'quit']:
+            print("Tạm biệt!")
+            break
+            
+        if not cau_hoi.strip():
+            continue
+            
         cau_tra_loi = run_agent(cau_hoi)
         print(f"Agent: {cau_tra_loi}")
-        time.sleep(15) # Nghỉ 15 giây trước khi hỏi câu tiếp theo
